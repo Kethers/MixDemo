@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     private GameObject attackTarget;
     private float lastAttackTime;
+    private bool isDead;
 
     void Awake()
     {
@@ -24,10 +25,17 @@ public class PlayerController : MonoBehaviour
     {
         MouseManager.Instance.OnMouseClicked += MoveToTarget;
         MouseManager.Instance.OnEnemyClicked += EventAttack;
+
+        GameManager.Instance.RegisterPlayer(characterStats);
     }
 
     void Update()
     {
+        isDead = characterStats.CurrentHealth == 0;
+
+        if (isDead)
+            GameManager.Instance.NotifyObservers();
+
         SwitchAnimation();
 
         lastAttackTime -= Time.deltaTime;
@@ -36,20 +44,26 @@ public class PlayerController : MonoBehaviour
     private void SwitchAnimation()
     {
         anim.SetFloat("Speed", agent.velocity.sqrMagnitude);
+        anim.SetBool("Death", isDead);
     }
 
     public void MoveToTarget(Vector3 target)
     {
         StopAllCoroutines();
+        if (isDead) return;
+
         agent.isStopped = false;
         agent.destination = target;
     }
 
     private void EventAttack(GameObject target)
     {
+        if (isDead) return;
+
         if (target != null)
         {
             attackTarget = target;
+            characterStats.isCritical = UnityEngine.Random.value < characterStats.attackData.criticalChance;
             StartCoroutine(MoveToAttackTarget());
         }
     }
@@ -60,8 +74,7 @@ public class PlayerController : MonoBehaviour
 
         transform.LookAt(attackTarget.transform);
 
-        // FIXME: Modify the attack range parameter
-        while (Vector3.Distance(attackTarget.transform.position, transform.position) > 1)
+        while (Vector3.Distance(attackTarget.transform.position, transform.position) > characterStats.attackData.attackRange)
         {
             agent.destination = attackTarget.transform.position;
             yield return null;
@@ -72,9 +85,18 @@ public class PlayerController : MonoBehaviour
         // Attack
         if (lastAttackTime < 0)
         {
+            anim.SetBool("Critical", characterStats.isCritical);
             anim.SetTrigger("Attack");
             // Reset CD time
-            lastAttackTime = 0.5f;
+            lastAttackTime = characterStats.attackData.coolDown;
         }
+    }
+
+    // Animation Event
+    void Hit()
+    {
+        var targetStats = attackTarget.GetComponent<CharacterStats>();
+
+        targetStats.TakeDamage(characterStats, targetStats);
     }
 }
