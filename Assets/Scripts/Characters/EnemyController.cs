@@ -13,13 +13,13 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
     private Animator anim;
     private Collider coll;
 
-    private CharacterStats characterStats;
+    protected CharacterStats characterStats;
 
     [Header("Basic Settings")]
     public float sightRadius;
     public bool isGuard;
     private float speed;
-    private GameObject attackTarget;
+    protected GameObject attackTarget;
     public float lookAtTime;
     private float remainLookAtTime;
     private float lastAttackTime;
@@ -196,7 +196,8 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
                 break;
             case EnemyStates.DEAD:
                 coll.enabled = false;
-                agent.enabled = false;
+                // agent.enabled = false;
+                agent.radius = 0;
                 Destroy(gameObject, 2f);
                 break;
 
@@ -271,7 +272,7 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
     // Animation Event
     void Hit()
     {
-        if (attackTarget != null)
+        if (attackTarget != null && transform.IsFacingTarget(attackTarget.transform))
         {
             var targetStats = attackTarget.GetComponent<CharacterStats>();
             targetStats.TakeDamage(characterStats, targetStats);
