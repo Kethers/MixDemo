@@ -49,6 +49,8 @@ public class MouseManager : Singleton<MouseManager>
                 OnMouseClicked?.Invoke(hitInfo.point);
             if (hitInfo.collider.gameObject.CompareTag("Enemy"))
                 OnEnemyClicked?.Invoke(hitInfo.collider.gameObject);
+            if (hitInfo.collider.gameObject.CompareTag("Attackable"))
+                OnEnemyClicked?.Invoke(hitInfo.collider.gameObject);
         }
     }
 }

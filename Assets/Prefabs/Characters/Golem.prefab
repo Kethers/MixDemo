@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &464746537147875672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431298306579538572}
+  m_Layer: 0
+  m_Name: HealthBarPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &431298306579538572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464746537147875672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4256114340985485703}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4256114338957863995
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +735,7 @@ GameObject:
   - component: {fileID: 4256114339910885104}
   - component: {fileID: 4256114339910885105}
   - component: {fileID: 4256114339910885110}
+  - component: {fileID: 6144031652583113006}
   m_Layer: 0
   m_Name: Golem
   m_TagString: Enemy
@@ -725,6 +756,7 @@ Transform:
   m_Children:
   - {fileID: 4256114339020312530}
   - {fileID: 4256114340770197234}
+  - {fileID: 431298306579538572}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 46.02, z: 0}
@@ -777,6 +809,8 @@ MonoBehaviour:
   lookAtTime: 3
   patrolRange: 0
   kickForce: 30
+  rockPrefab: {fileID: 0}
+  handPos: {fileID: 0}
 --- !u!114 &4256114339910885105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,6 +849,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6144031652583113006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256114340985485701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd49d1e8e0989a49ae32b971373c8fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthUIPrefab: {fileID: 5900902476287968198, guid: 497aac72000be6a47b00188532d02bae, type: 3}
+  barPoint: {fileID: 431298306579538572}
+  alwaysVisible: 0
+  visibleTime: 0
 --- !u!1 &4256114341079215555
 GameObject:
   m_ObjectHideFlags: 0
