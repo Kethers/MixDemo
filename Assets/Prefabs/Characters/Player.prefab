@@ -2140,8 +2140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c30e5410e13bf6b42b316b7cba190cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  templateData: {fileID: 0}
-  characterData: {fileID: 11400000, guid: f1952becbe2767941822bd624996bde2, type: 2}
+  templateData: {fileID: 11400000, guid: f1952becbe2767941822bd624996bde2, type: 2}
+  characterData: {fileID: 0}
   attackData: {fileID: 11400000, guid: 0b88c7f4c60b380479872364ad083f5e, type: 2}
   isCritical: 0
 --- !u!1 &5037302181870182384
