@@ -57,12 +57,14 @@ public class WinLosePauseManager : Singleton<WinLosePauseManager>, IEndGameObser
         else if (SceneManager.GetActiveScene().name == "Room")
         {
             var timeText = SurvivalTarget.transform.GetChild(1).GetComponent<Text>();
+            var target_2_Text = SurvivalTarget.transform.GetChild(2).GetComponent<Text>();
             if (survivalTime <= 0f)
             {
                 survivalTime = 0f;
                 timeText.color = Color.green;
                 target_1_Finished = true;
                 GameObject.Find("Portals").transform.Find("Portal EXIT").gameObject.SetActive(true);
+                target_2_Text.text = "从传送门撤离";
             }
             else
             {
@@ -72,7 +74,7 @@ public class WinLosePauseManager : Singleton<WinLosePauseManager>, IEndGameObser
 
             if (target_2_Finished)
             {
-                SurvivalTarget.transform.GetChild(2).GetComponent<Text>().color = Color.green;
+                target_2_Text.color = Color.green;
             }
         }
 
@@ -84,7 +86,7 @@ public class WinLosePauseManager : Singleton<WinLosePauseManager>, IEndGameObser
 
     public void GamePause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (InputManager.Instance.pauseKeyDown)
         {
             isGamePaused = !isGamePaused;
         }

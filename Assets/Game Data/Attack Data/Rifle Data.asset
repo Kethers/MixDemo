@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunName: Rifle
   bulletsPerMag: 30
-  currentBullets: 0
-  backupBullets: 29938
+  currentBullets: 30
+  backupBullets: 90
   fireGap: 0.1

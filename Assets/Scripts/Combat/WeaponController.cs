@@ -53,12 +53,9 @@ public class WeaponController : MonoBehaviour
 
     void InputProcess()
     {
-        if (!WinLosePauseManager.Instance.isGamePaused && !WinLosePauseManager.Instance.isGameEnd)
-        {
-            fireInput = Input.GetMouseButton(0);
-            reloadInput = Input.GetKeyDown(KeyCode.R);
-            holsterInput = Input.GetKeyDown(KeyCode.Q);
-        }
+        fireInput = InputManager.Instance.fireMouseBtn;
+        reloadInput = InputManager.Instance.reloadKeyDown;
+        holsterInput = InputManager.Instance.holsterKeyDown;
     }
 
     void Update()

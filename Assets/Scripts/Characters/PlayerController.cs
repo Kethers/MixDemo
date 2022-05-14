@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     private CharacterStats characterStats;
-    public float mouseSensitivity = 200.0f;
+    // public float mouseSensitivity = 200.0f; // move it to input manager
     private float rotX = 20f;
     private float speed;
     public float walkSpeed = 5f, runSpeed = 10f;
@@ -205,19 +205,16 @@ public class PlayerController : MonoBehaviour
 
     void InputProcess()
     {
-        if (!WinLosePauseManager.Instance.isGamePaused && !WinLosePauseManager.Instance.isGameEnd)
-        {
-            isRun = Input.GetKey(KeyCode.LeftShift) && !weaponController.isReloading;
-            isJump = Input.GetButtonDown("Jump");
-        }
+        isRun = InputManager.Instance.runKey && !weaponController.isReloading;
+        isJump = InputManager.Instance.jumpBtnDown;
     }
 
     void PlayerMovement()
     {
         speed = isRun ? runSpeed : walkSpeed;
 
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        float h = InputManager.Instance.horizontalAxisRaw;
+        float v = InputManager.Instance.verticalAxisRaw;
         moveDirection = (transform.right * h + transform.forward * v).normalized;
         isWalk = moveDirection.sqrMagnitude > 0.9f;
 
@@ -232,8 +229,8 @@ public class PlayerController : MonoBehaviour
 
     void CameraRotation()
     {
-        float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSensitivity;
+        float mouseX = InputManager.Instance.mouseX * InputManager.Instance.mouseSensitivity * Time.deltaTime;
+        float mouseY = InputManager.Instance.mouseY * InputManager.Instance.mouseSensitivity * Time.deltaTime;
 
         rotX -= mouseY;
         rotX = Mathf.Clamp(rotX, -80f, 80f);

@@ -28,10 +28,8 @@ public class TransitionPoint : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)
+        if (InputManager.Instance.evacuateKeyDown
             && canTrans
-            && !WinLosePauseManager.Instance.isGamePaused
-            && !WinLosePauseManager.Instance.isGameEnd
             && destinationTag == TransitionDestination.DestinationTag.EXIT)
         {
             // SceneController transition

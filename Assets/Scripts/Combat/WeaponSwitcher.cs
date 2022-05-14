@@ -24,10 +24,7 @@ public class WeaponSwitcher : MonoBehaviour
     private void Update()
     {
         activeGunController = activeGun.GetComponent<WeaponController>();
-        if (Input.GetKeyDown(KeyCode.Q)
-            && !activeGunController.isReloading
-            && !WinLosePauseManager.Instance.isGamePaused
-            && !WinLosePauseManager.Instance.isGameEnd)
+        if (InputManager.Instance.holsterKeyDown && !activeGunController.isReloading)
         {
             activeGunController.SwitchGun();
             activeGun.SetActive(false);
