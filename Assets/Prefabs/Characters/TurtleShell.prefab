@@ -701,7 +701,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3689113820411325884}
-  m_LocalRotation: {x: -0, y: 0.76508194, z: -0, w: 0.6439329}
+  m_LocalRotation: {x: 0, y: 0.7650844, z: 0, w: 0.6439301}
   m_LocalPosition: {x: -28.596622, y: 0, z: 32.052246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -755,10 +755,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546e0ffc34017074caedbdeb5248cfe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightRadius: 6
+  characterStats: {fileID: 0}
+  sightRadius: 20
   isGuard: 0
   lookAtTime: 4
   patrolRange: 5
+  enemyRenderer: {fileID: 3662312302132772282}
+  freezingMat: {fileID: 2100000, guid: e4efcb0475a88294ab5d2534b792e287, type: 2}
+  isFrozen: 0
+  fronzenTimeLeft: 0
 --- !u!114 &3689814232072881792
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,5 +2,6 @@
 
 public interface IEndGameObserver
 {
-    void EndNotify();
+    void PlayerLoseNotify();
+    void PlayerWinNotify();
 }

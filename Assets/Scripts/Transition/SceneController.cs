@@ -4,45 +4,47 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 
-public class SceneController : Singleton<SceneController>, IEndGameObserver
+public class SceneController : Singleton<SceneController>
 {
     public GameObject playerPrefab;
     public SceneFader sceneFaderPrefab;
-    bool fadeFinished;
+    // bool fadeFinished;
 
     GameObject player;
-    NavMeshAgent playerAgent;
+    public float fadeTime;
+    // NavMeshAgent playerAgent;
 
     protected override void Awake()
     {
         base.Awake();
+        fadeTime = 1f;
         DontDestroyOnLoad(this);
     }
 
     void Start()
     {
-        GameManager.Instance.AddObserver(this);
-        fadeFinished = true;
+        // GameManager.Instance.AddObserver(this);
+        // fadeFinished = true;
     }
 
-    public void TransitionToDestination(TransitionPoint transitionPoint)
-    {
-        switch (transitionPoint.transitionType)
-        {
-            case TransitionPoint.TransitionType.SameScene:
-                StartCoroutine(Transition(SceneManager.GetActiveScene().name, transitionPoint.destinationTag));
-                break;
+    // public void TransitionToDestination(TransitionPoint transitionPoint)
+    // {
+    //     switch (transitionPoint.transitionType)
+    //     {
+    //         case TransitionPoint.TransitionType.SameScene:
+    //             StartCoroutine(Transition(SceneManager.GetActiveScene().name, transitionPoint.destinationTag));
+    //             break;
 
-            case TransitionPoint.TransitionType.DifferentScene:
-                StartCoroutine(Transition(transitionPoint.sceneName, transitionPoint.destinationTag));
-                break;
-        }
-    }
+    //         case TransitionPoint.TransitionType.DifferentScene:
+    //             StartCoroutine(Transition(transitionPoint.sceneName, transitionPoint.destinationTag));
+    //             break;
+    //     }
+    // }
 
     IEnumerator Transition(string sceneName, TransitionDestination.DestinationTag destinationTag)
     {
-        // TODO: Save data
-        SaveManager.Instance.SavePlayerData();
+        // Save data
+        // SaveManager.Instance.SavePlayerData();
 
         if (SceneManager.GetActiveScene().name != sceneName)
         {
@@ -50,16 +52,16 @@ public class SceneController : Singleton<SceneController>, IEndGameObserver
             yield return SceneManager.LoadSceneAsync(sceneName);
             yield return Instantiate(playerPrefab, GetDestination(destinationTag).transform.position, GetDestination(destinationTag).transform.rotation);
             // Read saved data
-            SaveManager.Instance.LoadPlayerData();
+            // SaveManager.Instance.LoadPlayerData();
             yield break;
         }
         else
         {
             player = GameManager.Instance.playerStats.gameObject;
-            playerAgent = player.GetComponent<NavMeshAgent>();
-            playerAgent.enabled = false;
+            // playerAgent = player.GetComponent<NavMeshAgent>();
+            // playerAgent.enabled = false;
             player.transform.SetPositionAndRotation(GetDestination(destinationTag).transform.position, GetDestination(destinationTag).transform.rotation);
-            playerAgent.enabled = true;
+            // playerAgent.enabled = true;
             yield return null;
         }
     }
@@ -82,14 +84,19 @@ public class SceneController : Singleton<SceneController>, IEndGameObserver
         StartCoroutine(LoadMain());
     }
 
-    public void TransitionToLoadGame()
-    {
-        StartCoroutine(LoadLevel(SaveManager.Instance.SceneName));
-    }
+    // public void TransitionToLoadGame()
+    // {
+    //     StartCoroutine(LoadLevel(SaveManager.Instance.SceneName));
+    // }
 
-    public void TransitionToFirstLevel()
+    public void TransitionToAdventureLevel()
     {
         StartCoroutine(LoadLevel("Game"));
+    }
+
+    public void TransitionToSurvivalLevel()
+    {
+        StartCoroutine(LoadLevel("Room"));
     }
 
     IEnumerator LoadLevel(string scene)
@@ -97,13 +104,13 @@ public class SceneController : Singleton<SceneController>, IEndGameObserver
         SceneFader fade = Instantiate(sceneFaderPrefab);
         if (scene != "")
         {
-            yield return StartCoroutine(fade.FadeOut(2f));
+            yield return StartCoroutine(fade.FadeOut(fadeTime));
             yield return SceneManager.LoadSceneAsync(scene);
-            yield return player = Instantiate(playerPrefab, GameManager.Instance.GetEntrance().position, GameManager.Instance.GetEntrance().rotation);
+            // yield return player = Instantiate(playerPrefab, GameManager.Instance.GetEntrance().position, GameManager.Instance.GetEntrance().rotation);
 
             // Save data
-            SaveManager.Instance.SavePlayerData();
-            yield return StartCoroutine(fade.FadeIn(2f));
+            // SaveManager.Instance.SavePlayerData();
+            yield return StartCoroutine(fade.FadeIn(fadeTime));
             yield break;
         }
     }
@@ -111,19 +118,18 @@ public class SceneController : Singleton<SceneController>, IEndGameObserver
     IEnumerator LoadMain()
     {
         SceneFader fade = Instantiate(sceneFaderPrefab);
-        yield return StartCoroutine(fade.FadeOut(2f));
+        yield return StartCoroutine(fade.FadeOut(fadeTime));
         yield return SceneManager.LoadSceneAsync("Main");
-        yield return StartCoroutine(fade.FadeIn(2f));
+        yield return StartCoroutine(fade.FadeIn(fadeTime));
         yield break;
     }
 
-    public void EndNotify()
-    {
-        if (fadeFinished == true)
-        {
-            fadeFinished = false;
-            StartCoroutine(LoadMain());
-        }
-
-    }
+    // public void PlayerLoseNotify()
+    // {
+    //     if (fadeFinished == true)
+    //     {
+    //         fadeFinished = false;
+    //         StartCoroutine(LoadMain());
+    //     }
+    // }
 }

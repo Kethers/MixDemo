@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Rock : MonoBehaviour
 {
-    public enum RockStates { HitPlayer, HitEnemy, HitNothing }
+    public enum RockStates { HitPlayer, HitByBullet, HitNothing }
     private Rigidbody rb;
     public RockStates rockStates;
 
@@ -48,24 +48,32 @@ public class Rock : MonoBehaviour
             case RockStates.HitPlayer:
                 if (other.gameObject.CompareTag("Player"))
                 {
-                    other.gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-                    other.gameObject.GetComponent<NavMeshAgent>().velocity = direction * force;
+                    // other.gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+                    // FIXME: kick off effect to player
+                    // other.gameObject.GetComponent<Rigidbody>().AddForce((direction + Vector3.up) * force);
 
-                    other.gameObject.GetComponent<Animator>().SetTrigger("Dizzy");
+                    // other.gameObject.GetComponent<Animator>().SetTrigger("Dizzy");
                     other.gameObject.GetComponent<CharacterStats>().TakeDamage(damage, other.gameObject.GetComponent<CharacterStats>());
+                    var breakParticles = Instantiate(breakEffect, transform.position, Quaternion.identity);
+                    Destroy(breakParticles, 2f);
+                    Destroy(gameObject);
 
-                    rockStates = RockStates.HitNothing;
+                    // rockStates = RockStates.HitNothing;
                 }
                 break;
 
-            case RockStates.HitEnemy:
-                if (other.gameObject.GetComponent<Golem>())
-                {
-                    var otherStats = other.gameObject.GetComponent<CharacterStats>();
-                    otherStats.TakeDamage(damage, otherStats);
-                    Instantiate(breakEffect, transform.position, Quaternion.identity);
-                    Destroy(gameObject);
-                }
+            // case RockStates.HitByBullet:
+            //     if (other.gameObject.GetComponent<Golem>())
+            //     {
+            //         var otherStats = other.gameObject.GetComponent<CharacterStats>();
+            //         otherStats.TakeDamage(damage, otherStats);
+            //         Instantiate(breakEffect, transform.position, Quaternion.identity);
+            //         Destroy(gameObject);
+            //     }
+            //     break;
+
+            case RockStates.HitNothing:
+                Destroy(gameObject);
                 break;
         }
     }

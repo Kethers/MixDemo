@@ -6,42 +6,52 @@ using UnityEngine.Playables;
 
 public class MainMenu : MonoBehaviour
 {
-    Button newGameBtn;
-    Button continueBtn;
+    Button adventureBtn;
+    Button survivalBtn;
     Button quitBtn;
 
-    PlayableDirector director;
+    // PlayableDirector director;
 
     void Awake()
     {
-        newGameBtn = transform.GetChild(1).GetComponent<Button>();
-        continueBtn = transform.GetChild(2).GetComponent<Button>();
+        adventureBtn = transform.GetChild(1).GetComponent<Button>();
+        survivalBtn = transform.GetChild(2).GetComponent<Button>();
         quitBtn = transform.GetChild(3).GetComponent<Button>();
 
-        newGameBtn.onClick.AddListener(PlayTimeline);
-        continueBtn.onClick.AddListener(ContinueGame);
+        adventureBtn.onClick.AddListener(AdventureModeGame);
+        survivalBtn.onClick.AddListener(SurvivalModeGame);
         quitBtn.onClick.AddListener(QuitGame);
 
-        director = FindObjectOfType<PlayableDirector>();
-        director.stopped += NewGame;
+        // director = FindObjectOfType<PlayableDirector>();
+        // director.stopped += NewGame;
     }
 
-    void PlayTimeline()
+    // void PlayTimeline()
+    // {
+    //     director.Play();
+    // }
+
+    // void NewGame(PlayableDirector obj)
+    // {
+    //     PlayerPrefs.DeleteAll();
+    //     // Switch scene
+    //     SceneController.Instance.TransitionToFirstLevel();
+    // }
+
+    // void ContinueGame()
+    // {
+    //     // Switch scene and load data
+    //     SceneController.Instance.TransitionToLoadGame();
+    // }
+
+    void AdventureModeGame()
     {
-        director.Play();
+        SceneController.Instance.TransitionToAdventureLevel();
     }
 
-    void NewGame(PlayableDirector obj)
+    void SurvivalModeGame()
     {
-        PlayerPrefs.DeleteAll();
-        // Switch scene
-        SceneController.Instance.TransitionToFirstLevel();
-    }
-
-    void ContinueGame()
-    {
-        // Switch scene and load data
-        SceneController.Instance.TransitionToLoadGame();
+        SceneController.Instance.TransitionToSurvivalLevel();
     }
 
     void QuitGame()

@@ -6,28 +6,31 @@ using Cinemachine;
 public class GameManager : Singleton<GameManager>
 {
     public CharacterStats playerStats;
+    private bool haveNotified;
 
-    private CinemachineFreeLook followCamera;
+    // private CinemachineFreeLook followCamera;
 
     List<IEndGameObserver> endGameObservers = new List<IEndGameObserver>();
 
     protected override void Awake()
     {
         base.Awake();
-        DontDestroyOnLoad(this);
+        haveNotified = false;
+        Application.targetFrameRate = 144;
+        // DontDestroyOnLoad(this);
     }
 
     public void RegisterPlayer(CharacterStats player)
     {
         playerStats = player;
 
-        followCamera = FindObjectOfType<CinemachineFreeLook>();
+        // followCamera = FindObjectOfType<CinemachineFreeLook>();
 
-        if (followCamera != null)
-        {
-            followCamera.Follow = playerStats.transform.GetChild(2);
-            followCamera.LookAt = playerStats.transform.GetChild(2);
-        }
+        // if (followCamera != null)
+        // {
+        //     followCamera.Follow = playerStats.transform.GetChild(2);
+        //     followCamera.LookAt = playerStats.transform.GetChild(2);
+        // }
     }
 
     public void AddObserver(IEndGameObserver observer)
@@ -40,11 +43,25 @@ public class GameManager : Singleton<GameManager>
         endGameObservers.Remove(observer);
     }
 
-    public void NotifyObservers()
+    public void GameLoseNotifyObservers()
     {
+        if (haveNotified)
+            return;
+        haveNotified = true;
         foreach (var observer in endGameObservers)
         {
-            observer.EndNotify();
+            observer.PlayerLoseNotify();
+        }
+    }
+
+    public void GameWinNotifyObservers()
+    {
+        if (haveNotified)
+            return;
+        haveNotified = true;
+        foreach (var observer in endGameObservers)
+        {
+            observer.PlayerWinNotify();
         }
     }
 

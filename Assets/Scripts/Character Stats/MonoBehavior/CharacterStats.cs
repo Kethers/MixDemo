@@ -10,8 +10,7 @@ public class CharacterStats : MonoBehaviour
     public CharacterData_SO characterData;
     public AttackData_SO attackData;
 
-    [HideInInspector]
-    public bool isCritical;
+    [HideInInspector] public bool isCritical;
 
     void Awake()
     {
@@ -45,16 +44,19 @@ public class CharacterStats : MonoBehaviour
     }
     #endregion
 
+
+
     #region Character Combat
     public void TakeDamage(CharacterStats attacker, CharacterStats defender)
     {
         int damage = Mathf.Max(attacker.CurrentDamage() - defender.CurrentDefence, 0);
         CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
 
-        if (attacker.isCritical)
-        {
-            defender.GetComponent<Animator>().SetTrigger("Hit");
-        }
+        // only used when enemy attack player
+        // if (attacker.isCritical)
+        // {
+        //     defender.GetComponent<Animator>().SetTrigger("Hit");
+        // }
         // Update UI
         UpdateHealthBarOnAttack?.Invoke(CurrentHealth, MaxHealth);
         // Update exp
@@ -81,7 +83,7 @@ public class CharacterStats : MonoBehaviour
         if (isCritical)
         {
             coreDamage *= attackData.criticalMultiplier;
-            Debug.Log("Critical! " + coreDamage);
+            // Debug.Log("Critical! " + coreDamage);
         }
 
         return (int)coreDamage;

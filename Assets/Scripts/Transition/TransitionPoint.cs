@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TransitionPoint : MonoBehaviour
 {
@@ -17,12 +18,32 @@ public class TransitionPoint : MonoBehaviour
 
     private bool canTrans;
 
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Room" && destinationTag == TransitionDestination.DestinationTag.ENTER)
+        {
+            Destroy(gameObject, 2f);
+        }
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canTrans)
+        if (Input.GetKeyDown(KeyCode.E)
+            && canTrans
+            && !WinLosePauseManager.Instance.isGamePaused
+            && !WinLosePauseManager.Instance.isGameEnd
+            && destinationTag == TransitionDestination.DestinationTag.EXIT)
         {
-            // TODO: SceneController transition
-            SceneController.Instance.TransitionToDestination(this);
+            // SceneController transition
+            // SceneController.Instance.TransitionToDestination(this);
+            if (SceneManager.GetActiveScene().name == "Game")
+            {
+                WinLosePauseManager.Instance.target_2_Finished = true;
+            }
+            else if (SceneManager.GetActiveScene().name == "Room")
+            {
+                WinLosePauseManager.Instance.target_2_Finished = true;
+            }
         }
     }
 

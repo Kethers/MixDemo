@@ -17,9 +17,10 @@ public class Grunt : EnemyController
             Vector3 direction = attackTarget.transform.position - transform.position;
             direction.Normalize();
 
-            attackTarget.GetComponent<NavMeshAgent>().isStopped = true;
-            attackTarget.GetComponent<NavMeshAgent>().velocity = direction * kickForce;
-            attackTarget.GetComponent<Animator>().SetTrigger("Dizzy");
+            // FIXME: kick off effect
+            // attackTarget.GetComponent<NavMeshAgent>().isStopped = true;
+            // attackTarget.GetComponent<NavMeshAgent>().velocity = direction * kickForce;
+            // attackTarget.GetComponent<Animator>().SetTrigger("Dizzy");
         }
     }
 }

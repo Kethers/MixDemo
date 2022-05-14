@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26ac6887469a014c909eb273a72d2af, type: 3}
   m_Name: Golem Data
   m_EditorClassIdentifier: 
-  maxHealth: 80
-  currentHealth: 80
-  baseDefence: 3
-  currentDefence: 3
+  maxHealth: 10
+  currentHealth: 10
+  baseDefence: 15
+  currentDefence: 15
   killPoint: 50
   currentLevel: 0
   maxLevel: 0
-  baseExp: 0
+  baseExp: 10
   currentExp: 0
   levelBuff: 0

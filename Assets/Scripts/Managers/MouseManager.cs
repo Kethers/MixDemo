@@ -5,61 +5,81 @@ using System;
 
 public class MouseManager : Singleton<MouseManager>
 {
-    public Texture2D point, doorway, attack, target, arrow;
-    RaycastHit hitInfo;
-    public event Action<Vector3> OnMouseClicked;
-    public event Action<GameObject> OnEnemyClicked;
+    // public Texture2D point, doorway, attack, target, arrow;
+    // RaycastHit hitInfo;
+    // public event Action<Vector3> OnMouseClicked;
+    // public event Action<GameObject> OnEnemyClicked;
+
+    // protected override void Awake()
+    // {
+    //     base.Awake();
+    //     DontDestroyOnLoad(this);
+    // }
+
+    #region deprecated rpg code
+    // void Update()
+    // {
+    //     SetCursorTexture();
+    //     MouseControl();
+    // }
+
+
+    // void SetCursorTexture()
+    // {
+    //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+    //     if (Physics.Raycast(ray, out hitInfo))
+    //     {
+    //         // Switch mouse cursor texture
+    //         switch (hitInfo.collider.gameObject.tag)
+    //         {
+    //             case "Ground":
+    //                 Cursor.SetCursor(target, new Vector2(16, 16), CursorMode.Auto);
+    //                 break;
+    //             case "Enemy":
+    //                 Cursor.SetCursor(attack, new Vector2(16, 16), CursorMode.Auto);
+    //                 break;
+    //             case "Portal":
+    //                 Cursor.SetCursor(doorway, new Vector2(16, 16), CursorMode.Auto);
+    //                 break;
+
+    //             default:
+    //                 Cursor.SetCursor(arrow, new Vector2(16, 16), CursorMode.Auto);
+    //                 break;
+    //         }
+    //     }
+    // }
+
+    // void MouseControl()
+    // {
+    //     if (Input.GetMouseButtonDown(0) && hitInfo.collider != null)
+    //     {
+    //         if (hitInfo.collider.gameObject.CompareTag("Ground"))
+    //             OnMouseClicked?.Invoke(hitInfo.point);
+    //         if (hitInfo.collider.gameObject.CompareTag("Enemy"))
+    //             OnEnemyClicked?.Invoke(hitInfo.collider.gameObject);
+    //         if (hitInfo.collider.gameObject.CompareTag("Attackable"))
+    //             OnEnemyClicked?.Invoke(hitInfo.collider.gameObject);
+    //         if (hitInfo.collider.gameObject.CompareTag("Portal"))
+    //             OnMouseClicked?.Invoke(hitInfo.point);
+    //     }
+    // }
+    #endregion
 
     protected override void Awake()
     {
         base.Awake();
-        DontDestroyOnLoad(this);
     }
 
-    void Update()
+    private void Update()
     {
-        SetCursorTexture();
-        MouseControl();
-    }
-
-    void SetCursorTexture()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hitInfo))
+        if (WinLosePauseManager.Instance.isGamePaused || WinLosePauseManager.Instance.isGameEnd)
         {
-            // Switch mouse cursor texture
-            switch (hitInfo.collider.gameObject.tag)
-            {
-                case "Ground":
-                    Cursor.SetCursor(target, new Vector2(16, 16), CursorMode.Auto);
-                    break;
-                case "Enemy":
-                    Cursor.SetCursor(attack, new Vector2(16, 16), CursorMode.Auto);
-                    break;
-                case "Portal":
-                    Cursor.SetCursor(doorway, new Vector2(16, 16), CursorMode.Auto);
-                    break;
-
-                default:
-                    Cursor.SetCursor(arrow, new Vector2(16, 16), CursorMode.Auto);
-                    break;
-            }
+            Cursor.lockState = CursorLockMode.None;
         }
-    }
-
-    void MouseControl()
-    {
-        if (Input.GetMouseButtonDown(0) && hitInfo.collider != null)
+        else
         {
-            if (hitInfo.collider.gameObject.CompareTag("Ground"))
-                OnMouseClicked?.Invoke(hitInfo.point);
-            if (hitInfo.collider.gameObject.CompareTag("Enemy"))
-                OnEnemyClicked?.Invoke(hitInfo.collider.gameObject);
-            if (hitInfo.collider.gameObject.CompareTag("Attackable"))
-                OnEnemyClicked?.Invoke(hitInfo.collider.gameObject);
-            if (hitInfo.collider.gameObject.CompareTag("Portal"))
-                OnMouseClicked?.Invoke(hitInfo.point);
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

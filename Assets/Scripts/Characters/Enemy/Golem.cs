@@ -19,9 +19,10 @@ public class Golem : EnemyController
 
             Vector3 direction = (attackTarget.transform.position - transform.position).normalized;
 
-            targetStats.GetComponent<NavMeshAgent>().isStopped = true;
-            targetStats.GetComponent<NavMeshAgent>().velocity = direction * kickForce;
-            targetStats.GetComponent<Animator>().SetTrigger("Dizzy");
+            // FIXME: kick off effect
+            // targetStats.GetComponent<NavMeshAgent>().isStopped = true;
+            // targetStats.GetComponent<NavMeshAgent>().velocity = direction * kickForce;
+            // targetStats.GetComponent<Animator>().SetTrigger("Dizzy");
 
             targetStats.TakeDamage(characterStats, targetStats);
         }

@@ -22,7 +22,7 @@ public class HealthBarUI : MonoBehaviour
     void Awake()
     {
         currentStats = GetComponent<CharacterStats>();
-
+        alwaysVisible = true;
         currentStats.UpdateHealthBarOnAttack += UpdateHealthBar;
     }
 

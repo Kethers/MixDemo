@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public enum EnemyStates { GUARD, PATROL, CHASE, DEAD }
+public enum EnemyStates { GUARD, PATROL, CHASE, DEAD, Frozen }
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(CharacterStats))]
 public class EnemyController : MonoBehaviour, IEndGameObserver
@@ -13,7 +13,7 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
     private Animator anim;
     private Collider coll;
 
-    protected CharacterStats characterStats;
+    [HideInInspector] public CharacterStats characterStats;
 
     [Header("Basic Settings")]
     public float sightRadius;
@@ -35,6 +35,13 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
     bool isWalk, isChase, isFollow, isDead;
     bool playerDead;
 
+    public Renderer enemyRenderer;
+    private Material originalMat;
+    public Material freezingMat;
+    public bool isFrozen;
+    public const float frozenTime = 5f;
+    public float fronzenTimeLeft = 0f;
+
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -46,6 +53,8 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
         guardPos = transform.position;
         guardRotation = transform.rotation;
         remainLookAtTime = lookAtTime;
+        isFrozen = false;
+        originalMat = enemyRenderer.material;
     }
     void Start()
     {
@@ -84,6 +93,11 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
             SwitchAnimation();
             lastAttackTime -= Time.deltaTime;
         }
+
+        if (isFrozen)
+        {
+            AutoUnfreeze();
+        }
     }
 
     void SwitchAnimation()
@@ -99,13 +113,12 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
     {
         if (isDead)
             enemyStates = EnemyStates.DEAD;
+        else if (isFrozen)
+            enemyStates = EnemyStates.Frozen;
 
         // If found the player, switch to CHASE
         else if (FoundPlayer())
-        {
             enemyStates = EnemyStates.CHASE;
-            // Debug.Log("Found player!");
-        }
 
         switch (enemyStates)
         {
@@ -192,8 +205,8 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
                         Attack();
                     }
                 }
-
                 break;
+
             case EnemyStates.DEAD:
                 coll.enabled = false;
                 // agent.enabled = false;
@@ -201,6 +214,9 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
                 Destroy(gameObject, 2f);
                 break;
 
+            case EnemyStates.Frozen:
+                agent.isStopped = true;
+                break;
         }
     }
 
@@ -279,7 +295,7 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
         }
     }
 
-    public void EndNotify()
+    public void PlayerLoseNotify()
     {
         // play the victory animation
         // stop all movements
@@ -289,5 +305,40 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
         isChase = false;
         isWalk = false;
         attackTarget = null;
+    }
+
+    public void PlayerWinNotify()
+    {
+        isDead = true;
+    }
+
+    public void Freeze()
+    {
+        isFrozen = true;
+        fronzenTimeLeft = frozenTime;
+        enemyRenderer.material = freezingMat;
+        anim.speed = 0f;
+    }
+
+    public void UnFreeze(bool getShot)
+    {
+        isFrozen = false;
+        enemyRenderer.material = originalMat;
+        anim.speed = 1f;
+
+        if (getShot)
+            anim.SetTrigger("Hit");
+    }
+
+    public void AutoUnfreeze()
+    {
+        if (fronzenTimeLeft <= 0f)
+        {
+            UnFreeze(false);
+        }
+        else
+        {
+            fronzenTimeLeft -= Time.deltaTime;
+        }
     }
 }

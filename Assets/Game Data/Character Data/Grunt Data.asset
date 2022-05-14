@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26ac6887469a014c909eb273a72d2af, type: 3}
   m_Name: Grunt Data
   m_EditorClassIdentifier: 
-  maxHealth: 55
-  currentHealth: 55
-  baseDefence: 4
-  currentDefence: 4
+  maxHealth: 400
+  currentHealth: 400
+  baseDefence: 10
+  currentDefence: 10
   killPoint: 25
   currentLevel: 0
   maxLevel: 0
-  baseExp: 0
+  baseExp: 10
   currentExp: 0
   levelBuff: 0

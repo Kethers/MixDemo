@@ -97,10 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockStates: 0
-  force: 25
-  damage: 8
+  force: 40
+  damage: 20
   target: {fileID: 0}
-  direction: {x: 0, y: 0, z: 0}
   breakEffect: {fileID: 7880248419240319673, guid: ceb4d06aea5466c4096d8af663bd6617, type: 3}
 --- !u!54 &2634059766948615311
 Rigidbody:
