@@ -10,7 +10,7 @@ public class InputManager : Singleton<InputManager>
     public bool pauseKeyDown;
     public bool reloadKeyDown;
     public bool holsterKeyDown;
-    public bool forwardWalkKeyDown;
+    public bool forwardWalkKey;
     public bool jumpBtnDown;
     public bool evacuateKeyDown;
     public bool runKey;
@@ -39,13 +39,13 @@ public class InputManager : Singleton<InputManager>
             // Key Down
             reloadKeyDown = Input.GetKeyDown(KeyCode.R);
             holsterKeyDown = Input.GetKeyDown(KeyCode.Q);
-            forwardWalkKeyDown = Input.GetKeyDown(KeyCode.W);
             evacuateKeyDown = Input.GetKeyDown(KeyCode.E);
 
             // Button Down
             jumpBtnDown = Input.GetButtonDown("Jump");
 
             // Key Hold
+            forwardWalkKey = Input.GetKey(KeyCode.W);
             runKey = Input.GetKey(KeyCode.LeftShift);
 
             // Mouse Button
@@ -64,7 +64,6 @@ public class InputManager : Singleton<InputManager>
         {
             reloadKeyDown = false;
             holsterKeyDown = false;
-            forwardWalkKeyDown = false;
             evacuateKeyDown = false;
 
             // Button Down
@@ -72,6 +71,7 @@ public class InputManager : Singleton<InputManager>
 
             // Key Hold
             runKey = false;
+            forwardWalkKey = false;
 
             // Mouse Button
             fireMouseBtn = false;

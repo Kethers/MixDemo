@@ -24,6 +24,22 @@ public class GameManager : Singleton<GameManager>
     {
         playerStats = player;
 
+        // Reset gunData (bullet nums)
+        var guns = FindObjectsOfType<WeaponController>();
+        foreach (var gun in guns)
+        {
+            if (gun.gunData.gunName == "Frozer")
+            {
+                gun.gunData.backupBullets = 28;
+                gun.gunData.currentBullets = 7;
+            }
+            else if (gun.gunData.gunName == "Rifle")
+            {
+                gun.gunData.backupBullets = 90;
+                gun.gunData.currentBullets = 30;
+            }
+        }
+
         // followCamera = FindObjectOfType<CinemachineFreeLook>();
 
         // if (followCamera != null)

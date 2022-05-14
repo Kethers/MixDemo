@@ -205,7 +205,7 @@ public class PlayerController : MonoBehaviour
 
     void InputProcess()
     {
-        isRun = InputManager.Instance.runKey && !weaponController.isReloading;
+        isRun = InputManager.Instance.forwardWalkKey && InputManager.Instance.runKey && !weaponController.isReloading;
         isJump = InputManager.Instance.jumpBtnDown;
     }
 
