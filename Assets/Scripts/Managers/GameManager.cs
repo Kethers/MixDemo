@@ -25,7 +25,7 @@ public class GameManager : Singleton<GameManager>
         playerStats = player;
 
         // Reset gunData (bullet nums)
-        var guns = FindObjectsOfType<WeaponController>();
+        var guns = FindObjectsOfType<WeaponController>(true);
         foreach (var gun in guns)
         {
             if (gun.gunData.gunName == "Frozer")
