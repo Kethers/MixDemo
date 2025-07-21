@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="YooAsset" preserve="all"/>
+  <assembly fullname="YooAsset.RuntimeExtension" preserve="all"/>
+</linker>

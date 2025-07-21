@@ -11,7 +11,14 @@
 /[Uu]ser[Ss]ettings/
 
 # Build output dir
-/BuildOutput/
+/Builds
+
+# HybridCLR
+/HybridCLRData
+
+# YooAsset output
+/Bundles
+/yoo
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

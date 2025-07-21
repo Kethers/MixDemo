@@ -23,7 +23,20 @@ MonoBehaviour:
   hotUpdateDllCompileOutputRootDir: HybridCLRData/HotUpdateDlls
   externalHotUpdateAssembliyDirs: []
   strippedAOTDllOutputRootDir: HybridCLRData/AssembliesPostIl2CppStrip
-  patchAOTAssemblies: []
+  patchAOTAssemblies:
+  - mscorlib
+  - System
+  - System.Core
+  - UnityEngine.AIModule
+  - UnityEngine.AnimationModule
+  - UnityEngine.AudioModule
+  - UnityEngine.CoreModule
+  - UnityEngine.InputLegacyModule
+  - UnityEngine.ParticleSystemModule
+  - UnityEngine.PhysicsModule
+  - UnityEngine.UI
+  - UnityEngine.UIModule
+  - Cinemachine
   outputLinkFile: HybridCLRGenerate/link.xml
   outputAOTGenericReferenceFile: HybridCLRGenerate/AOTGenericReferences.cs
   maxGenericReferenceIteration: 10

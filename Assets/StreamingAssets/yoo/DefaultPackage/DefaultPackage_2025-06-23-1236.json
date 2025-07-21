@@ -1,0 +1,1870 @@
+{
+    "FileVersion": "2.3.1",
+    "EnableAddressable": true,
+    "LocationToLower": false,
+    "IncludeAssetGUID": false,
+    "OutputNameStyle": 0,
+    "BuildBundleType": 2,
+    "BuildPipeline": "ScriptableBuildPipeline",
+    "PackageName": "DefaultPackage",
+    "PackageVersion": "2025-06-23-1236",
+    "PackageNote": "2025/6/23 20:39:29",
+    "AssetList": [
+        {
+            "Address": "Golem",
+            "AssetPath": "Assets/Prefabs/Characters/Golem.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 0,
+            "DependBundleIDs": [
+                17,
+                22,
+                34,
+                39,
+                65,
+                66,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                78,
+                83,
+                84,
+                85,
+                86,
+                87
+            ]
+        },
+        {
+            "Address": "Grunt",
+            "AssetPath": "Assets/Prefabs/Characters/Grunt.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 1,
+            "DependBundleIDs": [
+                22,
+                39,
+                65,
+                66,
+                67,
+                68,
+                73,
+                78,
+                83,
+                84,
+                85,
+                86,
+                87
+            ]
+        },
+        {
+            "Address": "OldPlayer",
+            "AssetPath": "Assets/Prefabs/Characters/OldPlayer.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 2,
+            "DependBundleIDs": [
+                39,
+                42,
+                43,
+                44,
+                45,
+                84,
+                86,
+                87
+            ]
+        },
+        {
+            "Address": "Player",
+            "AssetPath": "Assets/Prefabs/Characters/Player.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 3,
+            "DependBundleIDs": [
+                14,
+                15,
+                32,
+                33,
+                39,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                80,
+                81,
+                83,
+                84,
+                86,
+                87
+            ]
+        },
+        {
+            "Address": "Slime",
+            "AssetPath": "Assets/Prefabs/Characters/Slime.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 4,
+            "DependBundleIDs": [
+                22,
+                39,
+                40,
+                73,
+                75,
+                76,
+                77,
+                78,
+                83,
+                84,
+                85,
+                86,
+                87
+            ]
+        },
+        {
+            "Address": "Soldier_MainMenu",
+            "AssetPath": "Assets/Prefabs/Characters/Soldier_MainMenu.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5,
+            "DependBundleIDs": [
+                39,
+                62,
+                63,
+                64,
+                87
+            ]
+        },
+        {
+            "Address": "TurtleShell",
+            "AssetPath": "Assets/Prefabs/Characters/TurtleShell.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6,
+            "DependBundleIDs": [
+                22,
+                39,
+                40,
+                41,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                83,
+                84,
+                85,
+                86,
+                87
+            ]
+        },
+        {
+            "Address": "DeathBox",
+            "AssetPath": "Assets/Prefabs/DeathBox.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 7,
+            "DependBundleIDs": [
+                86,
+                87
+            ]
+        },
+        {
+            "Address": "Game Manager",
+            "AssetPath": "Assets/Prefabs/Managers/Game Manager.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 8,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Input Manager",
+            "AssetPath": "Assets/Prefabs/Managers/Input Manager.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Mouse Manager",
+            "AssetPath": "Assets/Prefabs/Managers/Mouse Manager.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 10,
+            "DependBundleIDs": [
+                82
+            ]
+        },
+        {
+            "Address": "SaveManager",
+            "AssetPath": "Assets/Prefabs/Managers/SaveManager.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 11,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Scene Controller",
+            "AssetPath": "Assets/Prefabs/Managers/Scene Controller.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 12,
+            "DependBundleIDs": [
+                3,
+                14,
+                15,
+                25,
+                32,
+                33,
+                39,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                80,
+                81,
+                83,
+                84,
+                86,
+                87
+            ]
+        },
+        {
+            "Address": "WinLosePauseManager",
+            "AssetPath": "Assets/Prefabs/Managers/WinLosePauseManager.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 13,
+            "DependBundleIDs": [
+                79
+            ]
+        },
+        {
+            "Address": "Metal Bullet Hole Particle",
+            "AssetPath": "Assets/Prefabs/Particles/Metal Bullet Hole Particle.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 14,
+            "DependBundleIDs": [
+                51,
+                58,
+                87
+            ]
+        },
+        {
+            "Address": "Metal Impact Particles 1",
+            "AssetPath": "Assets/Prefabs/Particles/Metal Impact Particles 1.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 15,
+            "DependBundleIDs": [
+                52,
+                58,
+                87
+            ]
+        },
+        {
+            "Address": "muzzleFlash",
+            "AssetPath": "Assets/Prefabs/Particles/muzzleFlash.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 16,
+            "DependBundleIDs": [
+                60,
+                61,
+                87
+            ]
+        },
+        {
+            "Address": "RockBreak Particle",
+            "AssetPath": "Assets/Prefabs/Particles/RockBreak Particle.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 17,
+            "DependBundleIDs": [
+                66,
+                68,
+                71,
+                72,
+                87
+            ]
+        },
+        {
+            "Address": "Pillar",
+            "AssetPath": "Assets/Prefabs/Pillar.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 18,
+            "DependBundleIDs": [
+                86,
+                87
+            ]
+        },
+        {
+            "Address": "Portal",
+            "AssetPath": "Assets/Prefabs/Portal/Portal.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 19,
+            "DependBundleIDs": [
+                85,
+                87
+            ]
+        },
+        {
+            "Address": "RandomEnemyGenerator",
+            "AssetPath": "Assets/Prefabs/RandomEnemyGenerator.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 20,
+            "DependBundleIDs": [
+                1,
+                22,
+                39,
+                65,
+                66,
+                67,
+                68,
+                73,
+                78,
+                83,
+                84,
+                85,
+                86,
+                87
+            ]
+        },
+        {
+            "Address": "AdventureTarget Canvas",
+            "AssetPath": "Assets/Prefabs/UI/AdventureTarget Canvas.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 21,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Bar Holder",
+            "AssetPath": "Assets/Prefabs/UI/Bar Holder.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 22,
+            "DependBundleIDs": [
+                78
+            ]
+        },
+        {
+            "Address": "Crosshair Canvas",
+            "AssetPath": "Assets/Prefabs/UI/Crosshair Canvas.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 23,
+            "DependBundleIDs": [
+                78
+            ]
+        },
+        {
+            "Address": "Defeat Canvas",
+            "AssetPath": "Assets/Prefabs/UI/Defeat Canvas.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 24,
+            "DependBundleIDs": [
+                46
+            ]
+        },
+        {
+            "Address": "Fade Canvas",
+            "AssetPath": "Assets/Prefabs/UI/Fade Canvas.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 25,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "GunInfo Canvas",
+            "AssetPath": "Assets/Prefabs/UI/GunInfo Canvas.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 26,
+            "DependBundleIDs": [
+                46,
+                78
+            ]
+        },
+        {
+            "Address": "HealthBar Canvas",
+            "AssetPath": "Assets/Prefabs/UI/HealthBar Canvas.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 27,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Pause Canvas",
+            "AssetPath": "Assets/Prefabs/UI/Pause Canvas.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 28,
+            "DependBundleIDs": [
+                46
+            ]
+        },
+        {
+            "Address": "PlayerHealth Canvas",
+            "AssetPath": "Assets/Prefabs/UI/PlayerHealth Canvas.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 29,
+            "DependBundleIDs": [
+                46,
+                78
+            ]
+        },
+        {
+            "Address": "SurvivalTarget Canvas",
+            "AssetPath": "Assets/Prefabs/UI/SurvivalTarget Canvas.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 30,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Victory Canvas",
+            "AssetPath": "Assets/Prefabs/UI/Victory Canvas.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 31,
+            "DependBundleIDs": [
+                46
+            ]
+        },
+        {
+            "Address": "arms_assault_rifle_01",
+            "AssetPath": "Assets/Prefabs/Weapon/arms_assault_rifle_01.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 32,
+            "DependBundleIDs": [
+                47,
+                49,
+                50,
+                53,
+                55,
+                56,
+                57,
+                59,
+                60,
+                61,
+                83,
+                87
+            ]
+        },
+        {
+            "Address": "arms_handgun_01",
+            "AssetPath": "Assets/Prefabs/Weapon/arms_handgun_01.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33,
+            "DependBundleIDs": [
+                14,
+                15,
+                39,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                60,
+                61,
+                83,
+                87
+            ]
+        },
+        {
+            "Address": "Rock",
+            "AssetPath": "Assets/Prefabs/Weapon/Rock.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 34,
+            "DependBundleIDs": [
+                17,
+                66,
+                68,
+                70,
+                71,
+                72,
+                87
+            ]
+        },
+        {
+            "Address": "HotUpdate.dll",
+            "AssetPath": "Assets/YooDownloadRes/Code/HotUpdate.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 35,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "mscorlib.dll",
+            "AssetPath": "Assets/YooDownloadRes/Code/mscorlib.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 36,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "System.Core.dll",
+            "AssetPath": "Assets/YooDownloadRes/Code/System.Core.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 37,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "System.dll",
+            "AssetPath": "Assets/YooDownloadRes/Code/System.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 38,
+            "DependBundleIDs": []
+        }
+    ],
+    "BundleList": [
+        {
+            "BundleName": "assets_prefabs_characters_golem.bundle",
+            "UnityCRC": 682968330,
+            "FileHash": "8b95a884afeb09c42a7ea3fe815b473d",
+            "FileCRC": "1f26d47f",
+            "FileSize": 7696,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                17,
+                22,
+                34,
+                39,
+                40,
+                41,
+                42,
+                50,
+                53,
+                54,
+                55,
+                56,
+                57,
+                62,
+                65,
+                66,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                78,
+                83,
+                84,
+                85,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_characters_grunt.bundle",
+            "UnityCRC": 1752869990,
+            "FileHash": "e62728b1c2d61707df838a7e80f3a618",
+            "FileCRC": "81a3fec2",
+            "FileSize": 7765,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                22,
+                39,
+                40,
+                41,
+                42,
+                50,
+                53,
+                54,
+                55,
+                56,
+                57,
+                62,
+                65,
+                66,
+                67,
+                68,
+                69,
+                73,
+                74,
+                78,
+                83,
+                84,
+                85,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_characters_oldplayer.bundle",
+            "UnityCRC": 1406990053,
+            "FileHash": "69670a27cd6016bf403af25ca992563e",
+            "FileCRC": "ed746d06",
+            "FileSize": 12065,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                50,
+                53,
+                54,
+                55,
+                56,
+                57,
+                62,
+                65,
+                69,
+                73,
+                74,
+                84,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_characters_player.bundle",
+            "UnityCRC": 1442433882,
+            "FileHash": "d68e3ee7d6fe7c902d9ebc30f4e76ed1",
+            "FileCRC": "d6c403c1",
+            "FileSize": 45276,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                14,
+                15,
+                39,
+                40,
+                41,
+                42,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                60,
+                61,
+                62,
+                65,
+                69,
+                73,
+                74,
+                80,
+                81,
+                83,
+                84,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_characters_slime.bundle",
+            "UnityCRC": 112438181,
+            "FileHash": "fa7090f5af86fab3e7c8069e305e7ab8",
+            "FileCRC": "aacf59d6",
+            "FileSize": 6662,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                22,
+                39,
+                40,
+                41,
+                42,
+                50,
+                53,
+                54,
+                55,
+                56,
+                57,
+                62,
+                65,
+                69,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                83,
+                84,
+                85,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_characters_soldier_mainmenu.bundle",
+            "UnityCRC": 54107929,
+            "FileHash": "99bee210572869204f752418de896393",
+            "FileCRC": "8bb9854d",
+            "FileSize": 6100,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                39,
+                40,
+                41,
+                42,
+                50,
+                53,
+                54,
+                55,
+                56,
+                57,
+                62,
+                63,
+                64,
+                65,
+                69,
+                73,
+                74,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_characters_turtleshell.bundle",
+            "UnityCRC": 2433475738,
+            "FileHash": "5c8de195a1d25a183f7636f89e208edd",
+            "FileCRC": "e5a0acca",
+            "FileSize": 8298,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                22,
+                39,
+                40,
+                41,
+                42,
+                50,
+                53,
+                54,
+                55,
+                56,
+                57,
+                62,
+                65,
+                69,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                83,
+                84,
+                85,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_deathbox.bundle",
+            "UnityCRC": 3601396163,
+            "FileHash": "9ad2d767b8ab69adf77eeb7361ba8635",
+            "FileCRC": "7c8cb755",
+            "FileSize": 3667,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_managers_game_manager.bundle",
+            "UnityCRC": 3403109303,
+            "FileHash": "cb7ca162fdd84f6b295a2d8f1de3da31",
+            "FileCRC": "f913525f",
+            "FileSize": 2382,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_prefabs_managers_input_manager.bundle",
+            "UnityCRC": 3100877297,
+            "FileHash": "64548633b3f5d82e2d2bb798ed6e8fc6",
+            "FileCRC": "07bc0fe5",
+            "FileSize": 2575,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_prefabs_managers_mouse_manager.bundle",
+            "UnityCRC": 2103721459,
+            "FileHash": "efd973d05cc074e0ce47e02ec99e350a",
+            "FileCRC": "1d6177d6",
+            "FileSize": 2316,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_prefabs_managers_savemanager.bundle",
+            "UnityCRC": 3410246099,
+            "FileHash": "4e2fddde326a9088aadd0d6bf2e610d7",
+            "FileCRC": "76800e6d",
+            "FileSize": 2314,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_prefabs_managers_scene_controller.bundle",
+            "UnityCRC": 2494216714,
+            "FileHash": "6b8f257a60b6c04839c601bb2f6e40af",
+            "FileCRC": "d2bb5d0b",
+            "FileSize": 2585,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                3,
+                14,
+                15,
+                25,
+                39,
+                40,
+                41,
+                42,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                60,
+                61,
+                62,
+                65,
+                69,
+                73,
+                74,
+                80,
+                81,
+                83,
+                84,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_managers_winlosepausemanager.bundle",
+            "UnityCRC": 1183230042,
+            "FileHash": "04171e81e8b668502a50494a8917cf7b",
+            "FileCRC": "015aa10a",
+            "FileSize": 3776,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                79
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_particles_metal_bullet_hole_particle.bundle",
+            "UnityCRC": 3280519482,
+            "FileHash": "4957ca4506814d18cb6e962e8ce8c79d",
+            "FileCRC": "4afc46e7",
+            "FileSize": 27976,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                51,
+                58,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_particles_metal_impact_particles_1.bundle",
+            "UnityCRC": 2041487678,
+            "FileHash": "1b068cb5c6014adb916823ef77d1037d",
+            "FileCRC": "391287eb",
+            "FileSize": 27946,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                52,
+                58,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_particles_muzzleflash.bundle",
+            "UnityCRC": 1892120598,
+            "FileHash": "352941a49ef96ad96ecb4402506e049d",
+            "FileCRC": "ef3ba5a7",
+            "FileSize": 29196,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                60,
+                61,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_particles_rockbreak_particle.bundle",
+            "UnityCRC": 1542247197,
+            "FileHash": "4a714390273c41cd0fe9cb7e61f2e9f1",
+            "FileCRC": "1ddc11b3",
+            "FileSize": 27760,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                66,
+                68,
+                71,
+                72,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_pillar.bundle",
+            "UnityCRC": 553286958,
+            "FileHash": "cff2a75f809dd4f04e3b3f3463f4c9b6",
+            "FileCRC": "5aaa42e2",
+            "FileSize": 3079,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_portal_portal.bundle",
+            "UnityCRC": 764875002,
+            "FileHash": "159b8b8223845be7ba52cfc36a7e20fe",
+            "FileCRC": "35c1cfae",
+            "FileSize": 4002,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                85,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_randomenemygenerator.bundle",
+            "UnityCRC": 4167662495,
+            "FileHash": "ea2d703d98ef89c5e89cd564b883361a",
+            "FileCRC": "5df9ba4e",
+            "FileSize": 2590,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                1,
+                22,
+                39,
+                40,
+                41,
+                42,
+                50,
+                53,
+                54,
+                55,
+                56,
+                57,
+                62,
+                65,
+                66,
+                67,
+                68,
+                69,
+                73,
+                74,
+                78,
+                83,
+                84,
+                85,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_ui_adventuretarget_canvas.bundle",
+            "UnityCRC": 4008586272,
+            "FileHash": "b4161a9a7c552fdc9ea083c6f84246b8",
+            "FileCRC": "758c7091",
+            "FileSize": 5446,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_prefabs_ui_bar_holder.bundle",
+            "UnityCRC": 1904648074,
+            "FileHash": "68ed7369bd3a1f80709dc9e8532ed12a",
+            "FileCRC": "492a8449",
+            "FileSize": 3797,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                78
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_ui_crosshair_canvas.bundle",
+            "UnityCRC": 3996461157,
+            "FileHash": "4e664ca92bc56f2ea23ddc1bf8006d57",
+            "FileCRC": "a020acab",
+            "FileSize": 10589,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                78
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_ui_defeat_canvas.bundle",
+            "UnityCRC": 3380757640,
+            "FileHash": "5c4c6332cf81ed205555a8547716999d",
+            "FileCRC": "3c3f5ebb",
+            "FileSize": 11061,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                46
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_ui_fade_canvas.bundle",
+            "UnityCRC": 2911785796,
+            "FileHash": "8fb54b37f1d772ff1dea5b6a746903df",
+            "FileCRC": "100d417c",
+            "FileSize": 4918,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_prefabs_ui_guninfo_canvas.bundle",
+            "UnityCRC": 406180776,
+            "FileHash": "78a72eb833bc085698df436487eb77ad",
+            "FileCRC": "27568f61",
+            "FileSize": 6635,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                46,
+                78
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_ui_healthbar_canvas.bundle",
+            "UnityCRC": 3608628730,
+            "FileHash": "892677cd88fe0e26ccc1d792916eb684",
+            "FileCRC": "efc072f7",
+            "FileSize": 3450,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_prefabs_ui_pause_canvas.bundle",
+            "UnityCRC": 1700942978,
+            "FileHash": "28e1c4dc4b10f679165ffb5b437a78fd",
+            "FileCRC": "41511c18",
+            "FileSize": 11137,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                46
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_ui_playerhealth_canvas.bundle",
+            "UnityCRC": 315560140,
+            "FileHash": "6977ab17799540aae99871eb23a2f282",
+            "FileCRC": "787f6a44",
+            "FileSize": 5857,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                46,
+                78
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_ui_survivaltarget_canvas.bundle",
+            "UnityCRC": 1988272168,
+            "FileHash": "a06ed8614eee48d39e90e6cae936d8f5",
+            "FileCRC": "69c1f3d7",
+            "FileSize": 5438,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_prefabs_ui_victory_canvas.bundle",
+            "UnityCRC": 3744489966,
+            "FileHash": "0896649454f7d1435604120885fa3951",
+            "FileCRC": "47c98aff",
+            "FileSize": 11038,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                46
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_weapon_arms_assault_rifle_01.bundle",
+            "UnityCRC": 578150557,
+            "FileHash": "954745968537020fde2e369dac6eab24",
+            "FileCRC": "f688e5fe",
+            "FileSize": 36474,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                47,
+                49,
+                50,
+                53,
+                55,
+                56,
+                57,
+                60,
+                61,
+                83,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_weapon_arms_handgun_01.bundle",
+            "UnityCRC": 4093591182,
+            "FileHash": "a3aaf519f5beaca58e19bbe94a8ab9ed",
+            "FileCRC": "bee4f3f5",
+            "FileSize": 36596,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                14,
+                15,
+                39,
+                40,
+                41,
+                42,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                60,
+                61,
+                62,
+                65,
+                69,
+                73,
+                74,
+                83,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_prefabs_weapon_rock.bundle",
+            "UnityCRC": 2005475317,
+            "FileHash": "3b830e18657597e3dea1765a0879c580",
+            "FileCRC": "8dfd6d1b",
+            "FileSize": 4124,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                17,
+                66,
+                68,
+                70,
+                71,
+                72,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "assets_yoodownloadres_code_hotupdate_dll.bundle",
+            "UnityCRC": 1297429720,
+            "FileHash": "441605d00f69e56338bca612f45cf3f8",
+            "FileCRC": "76ae6392",
+            "FileSize": 21620,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_yoodownloadres_code_mscorlib_dll.bundle",
+            "UnityCRC": 4076402119,
+            "FileHash": "c6a8e3bfadf3e942a119c4256adf69f5",
+            "FileCRC": "9d5edfce",
+            "FileSize": 879684,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_yoodownloadres_code_system_core_dll.bundle",
+            "UnityCRC": 2778248544,
+            "FileHash": "ec19da9304a237ebe5ae64914c03b9a7",
+            "FileCRC": "c950c389",
+            "FileSize": 22833,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "assets_yoodownloadres_code_system_dll.bundle",
+            "UnityCRC": 206182336,
+            "FileHash": "21d5569dc7a4f59caf487d4130cb2c9d",
+            "FileCRC": "20f4f0d0",
+            "FileSize": 109460,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_animations_animators.bundle",
+            "UnityCRC": 2050469730,
+            "FileHash": "0fe334e5e71f7bb5d14b6b8b7dafc3af",
+            "FileCRC": "c114a3de",
+            "FileSize": 11127,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                40,
+                41,
+                42,
+                50,
+                53,
+                54,
+                55,
+                56,
+                57,
+                62,
+                65,
+                69,
+                73,
+                74,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_animations_enemy_slime.bundle",
+            "UnityCRC": 29271525,
+            "FileHash": "d8ab6bf894edc2fa2a9c0bf4fb7473ce",
+            "FileCRC": "416de39b",
+            "FileSize": 13781,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_animations_enemy_turtleshell.bundle",
+            "UnityCRC": 2377418108,
+            "FileHash": "f11e971aa5c6f1877b2768f3820d2844",
+            "FileCRC": "b3325c2d",
+            "FileSize": 27291,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_dogknight_animations.bundle",
+            "UnityCRC": 1845716422,
+            "FileHash": "6f51957697bf546aa97bc0e98db6efd8",
+            "FileCRC": "a8da078d",
+            "FileSize": 147688,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_dogknight_material.bundle",
+            "UnityCRC": 1722810162,
+            "FileHash": "547d36684bb2a556945af486e336d36c",
+            "FileCRC": "4d58c3a2",
+            "FileSize": 2947,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                45,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_dogknight_mesh.bundle",
+            "UnityCRC": 861537387,
+            "FileHash": "3222fcb894af61bfff1fc9084d89f4fe",
+            "FileCRC": "871f4118",
+            "FileSize": 217034,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_dogknight_texture.bundle",
+            "UnityCRC": 492417207,
+            "FileHash": "9fbfcd1ec76aa57302466fbac95d0953",
+            "FileCRC": "f5e25571",
+            "FileSize": 5848,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_font.bundle",
+            "UnityCRC": 3525156551,
+            "FileHash": "a3754bf04d7706fe9f6acc77c535c81d",
+            "FileCRC": "51cd3d9a",
+            "FileSize": 3162997,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_audio_gun_reloads_assault_rifle_01_reloads.bundle",
+            "UnityCRC": 2594932385,
+            "FileHash": "2bf3d31308d2f475e65d4526a947f691",
+            "FileCRC": "355b0771",
+            "FileSize": 57057,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_audio_gun_reloads_handgun_01-04_reloads.bundle",
+            "UnityCRC": 3166182833,
+            "FileHash": "bbf487b8fc6c41ca78e2c78c2454c1cd",
+            "FileCRC": "7ae871f5",
+            "FileSize": 94193,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_audio_shoot.bundle",
+            "UnityCRC": 1253625891,
+            "FileHash": "705c7ca467c228feead80d9125f69241",
+            "FileCRC": "b8741b41",
+            "FileSize": 134784,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_low_poly_fps_pack_-_free_(sample)_components_materials.bundle",
+            "UnityCRC": 986965768,
+            "FileHash": "fe0d79b08796f721566aa08de31ddf13",
+            "FileCRC": "404918cb",
+            "FileSize": 3085,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                56,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_low_poly_fps_pack_-_free_(sample)_components_materials_bullet_impact_materials.bundle",
+            "UnityCRC": 1223524481,
+            "FileHash": "4b3d4c0e46a037f914df6db4207dc8b2",
+            "FileCRC": "fc021558",
+            "FileSize": 2773,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                58,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_low_poly_fps_pack_-_free_(sample)_components_materials_particles.bundle",
+            "UnityCRC": 1130283987,
+            "FileHash": "5ab15ae84a788c2a220711ad6415aca9",
+            "FileCRC": "7d6137f2",
+            "FileSize": 2764,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                58,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_low_poly_fps_pack_-_free_(sample)_components_meshes_arms_assault_rifle_01.bundle",
+            "UnityCRC": 2451354957,
+            "FileHash": "28dbc35b3837486a7cc28cb9a06aa65c",
+            "FileCRC": "5c29d03a",
+            "FileSize": 2135901,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                50,
+                55,
+                56,
+                57,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_low_poly_fps_pack_-_free_(sample)_components_meshes_arms_handgun_01.bundle",
+            "UnityCRC": 1604997845,
+            "FileHash": "69705a63370b80126c67ca746356ad66",
+            "FileCRC": "7a426a98",
+            "FileSize": 2219521,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                50,
+                55,
+                56,
+                57,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_low_poly_fps_pack_-_free_(sample)_components_meshes_arms_materials.bundle",
+            "UnityCRC": 2675904204,
+            "FileHash": "dd3fc2c0e37739146ad75f8995c6f9cf",
+            "FileCRC": "612575af",
+            "FileSize": 3061,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                57,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_low_poly_fps_pack_-_free_(sample)_components_textures_&_sprites.bundle",
+            "UnityCRC": 3164598954,
+            "FileHash": "d86180f57f956503e3800140b72f53be",
+            "FileCRC": "57e71c9f",
+            "FileSize": 4398,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_low_poly_fps_pack_-_free_(sample)_components_textures_&_sprites_arm_textures.bundle",
+            "UnityCRC": 269580410,
+            "FileHash": "bc39b156f541a7abb5098e7ba5d4a188",
+            "FileCRC": "428f8669",
+            "FileSize": 51349,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_low_poly_fps_pack_-_free_(sample)_components_textures_&_sprites_particles.bundle",
+            "UnityCRC": 321737270,
+            "FileHash": "72800726d762bd941bfa10e9c914e04e",
+            "FileCRC": "89f3fe3b",
+            "FileSize": 32609,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_prefabs.bundle",
+            "UnityCRC": 3305209875,
+            "FileHash": "3092e0f05063fb0340850cb1af2db2d1",
+            "FileCRC": "b832d486",
+            "FileSize": 29378,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                60,
+                61,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_standard_assets_particlesystems_materials.bundle",
+            "UnityCRC": 27063409,
+            "FileHash": "cb0a8a79f4c9c62583e0bf999b701bac",
+            "FileCRC": "3bca32b2",
+            "FileSize": 2539,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                61,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_low_poly_fps_pack_-_free_(sample)_standard_assets_particlesystems_textures.bundle",
+            "UnityCRC": 3849475466,
+            "FileHash": "5c94c26bdecc9a64fbe4c800f6d3f088",
+            "FileCRC": "3b2cc39f",
+            "FileSize": 30314,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_lowpolysoldiers_demo_animation.bundle",
+            "UnityCRC": 521752873,
+            "FileHash": "c3a0bceed03897b45cea64cd630a001f",
+            "FileCRC": "ca01b509",
+            "FileSize": 52714,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_lowpolysoldiers_demo_models.bundle",
+            "UnityCRC": 922294458,
+            "FileHash": "fa8c9d09dd90eaf55dc92c85c2ebc9e3",
+            "FileCRC": "ead9f687",
+            "FileSize": 60904,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                64,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_lowpolysoldiers_demo_models_materials.bundle",
+            "UnityCRC": 965698194,
+            "FileHash": "771c18a2e8909fffaf7b8f1a8dc95b81",
+            "FileCRC": "e003f131",
+            "FileSize": 1062499,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_mini_legion_grunt_pbr_hp_polyart_animations.bundle",
+            "UnityCRC": 1230058585,
+            "FileHash": "cc7f6e01a9dd9fa946b483838cb5a7ee",
+            "FileCRC": "dfdd01dd",
+            "FileSize": 128210,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_mini_legion_grunt_pbr_hp_polyart_material.bundle",
+            "UnityCRC": 3134700412,
+            "FileHash": "6145a9a60249015b78cfa3eb10f3a444",
+            "FileCRC": "9536f535",
+            "FileSize": 2996,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                68,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_mini_legion_grunt_pbr_hp_polyart_mesh.bundle",
+            "UnityCRC": 2761224578,
+            "FileHash": "8f0455e545e4793aba4198f5841b0994",
+            "FileCRC": "e42f75dd",
+            "FileSize": 51839,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_mini_legion_grunt_pbr_hp_polyart_textures.bundle",
+            "UnityCRC": 3735616168,
+            "FileHash": "753f5603ec6e6e9847ae5455b5ee4b90",
+            "FileCRC": "2b34219e",
+            "FileSize": 10982,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_mini_legion_rock_golem_pbr_hp_polyart_animations.bundle",
+            "UnityCRC": 2912026469,
+            "FileHash": "66ceda1e0d566ccf81e2bab135c13bb4",
+            "FileCRC": "291f2667",
+            "FileSize": 116186,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_mini_legion_rock_golem_pbr_hp_polyart_materials.bundle",
+            "UnityCRC": 422310756,
+            "FileHash": "06fd52fdceb2fa7578d9d1b25364d3fc",
+            "FileCRC": "19da3967",
+            "FileSize": 3004,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                72,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_mini_legion_rock_golem_pbr_hp_polyart_meshes.bundle",
+            "UnityCRC": 129751998,
+            "FileHash": "c9665f062e07f5e8ccc174c999b9e212",
+            "FileCRC": "64cb5245",
+            "FileSize": 67231,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                72,
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_mini_legion_rock_golem_pbr_hp_polyart_textures.bundle",
+            "UnityCRC": 2357176472,
+            "FileHash": "a5ec3648f2d03c94bf4ec26b9c6299d1",
+            "FileCRC": "e70a2874",
+            "FileSize": 10989,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_rpg_monster_duo_pbr_polyart_animations_slime.bundle",
+            "UnityCRC": 3753457065,
+            "FileHash": "bb0d3e1728e7867a594e896f52222e71",
+            "FileCRC": "523b8a9a",
+            "FileSize": 336864,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_rpg_monster_duo_pbr_polyart_animations_turtleshell.bundle",
+            "UnityCRC": 3222641170,
+            "FileHash": "c0115e8aa42756f1d595d8ce7dcc02de",
+            "FileCRC": "4105f1cf",
+            "FileSize": 432498,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_rpg_monster_duo_pbr_polyart_materials.bundle",
+            "UnityCRC": 1198629715,
+            "FileHash": "eb0a41d56814f7b2ada02d0813c96353",
+            "FileCRC": "65a1bdac",
+            "FileSize": 2973,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                77,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_rpg_monster_duo_pbr_polyart_meshes.bundle",
+            "UnityCRC": 1522920832,
+            "FileHash": "1b48ac17d2f7f15fa781616dcfa6511a",
+            "FileCRC": "c2ad96b6",
+            "FileSize": 114356,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                86,
+                87
+            ]
+        },
+        {
+            "BundleName": "share_assets_assets_packs_rpg_monster_duo_pbr_polyart_textures.bundle",
+            "UnityCRC": 1914459245,
+            "FileHash": "5d707a34dee3d9022deefd95f00cfee8",
+            "FileCRC": "3db5fab1",
+            "FileSize": 3937,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_assets_packs_ui_assets.bundle",
+            "UnityCRC": 3947629373,
+            "FileHash": "e4498a2300ef9178c4141eb68173c7af",
+            "FileCRC": "ab40b73a",
+            "FileSize": 9289,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_audios_gameover.bundle",
+            "UnityCRC": 2491747730,
+            "FileHash": "62e0cb70375ebcbb4cb95747bd974ec2",
+            "FileCRC": "4e12930d",
+            "FileSize": 128573,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_audios_gun_audios.bundle",
+            "UnityCRC": 2770996013,
+            "FileHash": "4fd20d66a0fb4ee9a4b9697bdddcf2ae",
+            "FileCRC": "aac941a7",
+            "FileSize": 134716,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_audios_movement.bundle",
+            "UnityCRC": 3029146026,
+            "FileHash": "77be53f74030633ddbb83dde76f64b3c",
+            "FileCRC": "0739b7a4",
+            "FileSize": 87624,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_cursor.bundle",
+            "UnityCRC": 3932668353,
+            "FileHash": "84cca266348c659165f8a0f68633d296",
+            "FileCRC": "8823b610",
+            "FileSize": 9364,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_game_data_attack_data.bundle",
+            "UnityCRC": 221113314,
+            "FileHash": "a8bf667fd530ded25a70749663212b08",
+            "FileCRC": "a2b4806d",
+            "FileSize": 2695,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_game_data_character_data.bundle",
+            "UnityCRC": 892649855,
+            "FileHash": "2877a7560f546298819980713ec493f8",
+            "FileCRC": "644b3246",
+            "FileSize": 2233,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "share_assets_materials.bundle",
+            "UnityCRC": 1620781203,
+            "FileHash": "0e77ec78d6160a9e729a2289c4e521ae",
+            "FileCRC": "2c98f86a",
+            "FileSize": 12713,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                87
+            ]
+        },
+        {
+            "BundleName": "share_packages_com_unity_render-pipelines_universal_runtime_materials.bundle",
+            "UnityCRC": 2856943989,
+            "FileHash": "de6218ce72ef6be5e8dea50391546209",
+            "FileCRC": "beea31f7",
+            "FileSize": 2942,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": [
+                87
+            ]
+        },
+        {
+            "BundleName": "unityshaders.bundle",
+            "UnityCRC": 3156884000,
+            "FileHash": "6ecbaa3ae02614b79cd3d4faf5dda5f7",
+            "FileCRC": "adf1e48d",
+            "FileSize": 131276,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        }
+    ]
+}
